@@ -1,0 +1,631 @@
+/* Place your CSS styles in this file */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+p {
+    line-height: 1.3;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 1%;
+}
+
+
+
+
+
+/* HEADER */
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVV
+   Header and Title
+   VVVVVVVVVVVVVVVVVVVVVVVVVV */
+        .header-container /* The entire header */ {
+            background-color: white;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-top /* Top-most part of the header - contains logo lines and text */ {
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            margin-bottom: 10px;
+        }        
+        .header-border /* Border for the "MUSEUM of the MUNDANE part */ {
+            padding: 10px 0;
+            width: 100%;
+            background-image: url('/images/textureNoise.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+        }
+        .header-content /* Interior white part of the border */ {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-color: white;
+            border-style: solid;
+            border-width: 2px;
+            border-color: black;
+            margin-inline: auto;
+        }
+        .logo-line /* Line that flanks the text in the title */ {
+            display: none; /* Hidden on smaller screens by default */
+            background-color: black;
+            height: 20px;
+            width: 150px;
+            margin: 0 20px;
+        }
+        .header-content h1 /* "MUSEUM OF THE MUNDANE" text */ {
+            margin: 0;
+            color: black;
+            font-size: 2em;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVV
+   Navigation Bar
+   VVVVVVVVVVVVVVVVVVVVVVVVVV */
+        .navigation-bar nav /* Navigation Bar TOTAL */ {
+        text-align: center;
+        padding: 10px 0;
+        width: 100%;
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        }
+        .navigation-bar nav ul /* Items within the Navigation bar */ {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+        .navigation-bar nav ul li /* Navigation menu display */ {
+        margin: 10px 0;
+        }
+        .navigation-bar nav ul li a /* Navigation menu Text */ {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+        display: block;
+        padding: 8px 0;
+        border-bottom: 1px solid lightgray;
+        }
+        .navigation-bar nav ul li:last-child a {
+        border-bottom: none;
+        }
+
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVV
+   Individual page titles.
+   VVVVVVVVVVVVVVVVVVVVVVVVVV */
+        .page-title /* The entire page title - has the pixel texture in it */ {
+            padding: 5px 0;
+            width: 100%;
+            background-image: url('/images/texturePixel.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            margin-bottom: -43px;
+        }
+        .page-title-content /* the white part of the page's title */ {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            background-color: white;
+            border-style: solid;
+            border-width: 2px;
+            border-color: black;
+            margin-inline: auto;
+        }
+        .page-title-content h1 /* the text within the white box */ {
+            margin: 0;
+            color: black;
+            font-size: 2em;
+            letter-spacing: 8px;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .page-title-content h1::before,
+        .page-title-content h1::after /* Dots flanking page title - these should dissapear at smaller sizes like the lines */ {
+            content: "";
+            display: inline-block;
+            width: 0.6em;
+            height: 0.6em; 
+            border-radius: 50%; 
+            background-color: black; 
+            margin: 0 0.5em;
+        }
+
+
+
+
+
+/* BODY */
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVV
+   Non-highlighted, non boxed in content
+   VVVVVVVVVVVVVVVVVVVVVVVVVV */
+        .regular-article /* What a normal article looks like */{
+            padding-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: left;
+            width: 50%;
+            margin: 1.5em auto;
+            display: flex;
+            flex-direction: column;
+        }
+        .regular-article-call /* For a question or "call". Use only on the 2nd call of a block. */ {
+            padding-top: 1.8em;
+}
+        .regular-article-response /* For a response to the previous item */ {
+            padding-left: 10%;
+}
+
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVV
+   Highlighted article: Content with a box around it for emphasis
+   VVVVVVVVVVVVVVVVVVVVVVVVVV */
+        .highlighted-article /* What a "highlighted" article looks like, including the border */ {
+            padding: 20px;
+            text-align: left;
+            width: 50%;
+            margin: 1.5em auto;
+            border: 2px;
+            border-color: black;
+            border-style: solid;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .highlighted-article-image img /* the image within the highlighted article */ {
+            display: block;
+            max-width: 100%;
+            max-height: 50vh;
+            height: auto;
+            margin: 0 auto 20px auto;
+            object-fit: contain;
+        }
+
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVV
+   Grid of items
+   VVVVVVVVVVVVVVVVVVVVVVVVVV */
+        .featured-section /* Any section that shows multiple options */ {
+            padding: 20px;
+            text-align: left;
+            margin: 1.5em auto;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            max-width: 1080px;
+        }
+        .featured-section h2 /* Title of section */ {
+            font-size: 2em;
+            margin-bottom: 1em;
+            text-align: center;
+        }
+        .item-grid /* The grid itself total */ {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start; /* Align items to the start on larger screens */
+        }
+        .grid-item /* The items within the grid */ {
+            border: 2px solid black;
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            background-color: white;
+            width: calc(33.33% - 20px); /* Roughly one-third width with margin */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-item img /* The images in the grid */ {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .grid-item h3 /* The header within the Grid */ {
+            font-size: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        .grid-item p /* Modifications of the standard text to make them fit a bit better */ {
+            font-size: 0.9em;
+            line-height: 1.4;
+            text-align: center;
+        }
+        .grid-item a /* The link within the grid, for the collection page */ {
+            font-size: 20px;
+        }
+
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVV
+   Form
+   VVVVVVVVVVVVVVVVVVVVVVVVVV */
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 15px;
+        }
+        .form label {
+            font-weight: bold;
+        }
+        .form input[type="text"],
+        .form input[type="email"],
+        .form textarea,
+        .form input[type="file"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+        .textarea {
+            min-height: 100px;
+        }
+        .form button[type="submit"] {
+            background-color: blue; /* Example button color */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            align-self: flex-end; /* Align button to the right */
+        }
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVV
+   Payment Buttons for Stripe and Paypal
+   VVVVVVVVVVVVVVVVVVVVVVVVVV */
+        .payment-buttons-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+        button[type="payment"] {
+            font-size: 1.2em;
+            padding: 12px 24px;
+            border-radius: 8px;
+            flex-grow: 1; 
+            background-color: blue; /* Example button color */
+            color: white;
+        }
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVV
+   Store
+   VVVVVVVVVVVVVVVVVVVVVVVVVV */
+        .store-page /* Basic page set-up*/ {
+            padding: 20px;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            margin: 20px auto; 
+            max-width: 1200px; 
+        }
+        .store-header /* contains the search bar, buttons, cart, etc. */ {
+            margin-bottom: 20px;
+        }
+        .search-bar /* the entirety of the bar; contains the flex */ {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .search-bar input[type="text"]  /* the searchbar proper */  {
+            padding: 10px;
+            border: 1px solid black;
+            flex-grow: 1;
+            font-size: 1em;
+        }
+        .search-bar button[type="submit"] /* The button to search shit */ {
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .search-bar .cart /* the part of the cart that shows 0 */ {
+            font-size: 1em;
+        }
+        .search-bar .cart-link /* the part of the cart that would take you to see it */ {
+            color: blue;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .store-content /* The content within the store, sans header - contains flexbox */ {
+            display: flex;
+            gap: 30px;
+        }
+        .filter-section /* part with the filters */  {
+            width: 200px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .filter-section h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .filter-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .filter-section li {
+            margin-bottom: 8px;
+        }
+        .filter-section label {
+            margin-left: 5px;
+        }
+        .featured-products /* The list of items */ {
+            flex-grow: 1;
+        }
+        .featured-products h2 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+
+        .featured-product /* the main featured product - the Mundane Plushie */ {
+            border: 2px solid black;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .featured-product .product-image /* main product image */ {
+            size: 65%;
+            border: 1px solid #eee;
+            margin-bottom: 10px;
+            /* Add background image here if you have it */
+        }
+        .featured-product .product-title {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+        .featured-product .product-price {
+            color: black;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .featured-product .product-description {
+            margin-bottom: 15px;
+        }
+        .featured-product .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .featured-product .product-actions button {
+            padding: 8px 15px;
+            background-color: white;
+            color: blue;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .featured-product .product-actions .add-to-cart {
+            background-color: blue;
+            color: white;
+        }
+
+        .other-products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            border: 2px solid black;
+            padding: 15px;
+            gap: 20px;
+            text-align: center;
+        }
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    border: 2px solid black;
+    padding: 15px;
+    text-align: center;
+}
+.product-image {
+    width: 100%; 
+    height: 200px; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 10px;
+}
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    display: block;
+}
+.product-title {
+    font-size: 1.1em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.product-description {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+.spacer {
+    margin-bottom: 20px;
+}
+
+
+/* FOOTER */
+
+        footer {
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+/* ========================================
+Desktop
+======================================== */
+
+/* VVVVVVVVVVVVVVVVVVVVVVVVVV
+   Minimum width for laptops.
+   VVVVVVVVVVVVVVVVVVVVVVVVVV */
+@media all and (min-width: 769px) {
+
+    .logo-line {
+        display: block;
+    }
+    
+    .header-content {
+        margin-inline: auto; 
+        max-width: 600px;
+    }
+
+    .navigation-bar nav ul {
+        display: inline-block;
+    }
+
+    .navigation-bar nav ul li {
+        display: inline;
+        margin: 0 15px; 
+    }
+
+    .navigation-bar nav ul li a {
+        display: inline-block; 
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .highlighted-article {
+        max-width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .item-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+    }
+
+    .grid-item {
+        width: calc(33.33% - 20px); 
+    } 
+
+
+} /* closes 769px+ */
+
+/* ========================================
+Smaller Screens
+======================================== */
+@media (max-width: 768px) {
+
+    .item-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    .grid-item h3 {
+        font-size: auto;
+        margin-bottom: 0.2em;
+}
+    
+    .grid-item {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .grid-item a {
+            font-size: auto;
+    }
+
+    .page-title-content h1::before,
+    .page-title-content h1::after {
+        display: inline-block;
+        width: 0; 
+        height: 0; 
+        border-radius: 0; 
+        background-color: black; 
+        margin: 0 0; 
+    }
+    
+    .payment-buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    button[type="payment"] {
+        width: 100%; 
+        margin-bottom: 4px; 
+    }
+    
+    .payment-buttons-container button[type="payment"]:last-child {
+        margin-bottom: 0;
+    }    
+
+    .store-page {
+        width: 95%; 
+        margin: 20px auto; 
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .store-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .filter-section {
+        width: 100%;
+    }
+
+    .other-products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+}
