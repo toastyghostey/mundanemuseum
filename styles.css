@@ -42,7 +42,7 @@ p {
         .header-border /* Border for the "MUSEUM of the MUNDANE part */ {
             padding: 10px 0;
             width: 100%;
-            background-image: url('/images/textureNoise.png');
+            background-image: url('images/textureNoise.png');
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
@@ -111,7 +111,7 @@ p {
         .page-title /* The entire page title - has the pixel texture in it */ {
             padding: 5px 0;
             width: 100%;
-            background-image: url('/images/texturePixel.png');
+            background-image: url('images/texturePixel.png');
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
