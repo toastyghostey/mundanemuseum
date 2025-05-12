@@ -42,7 +42,7 @@ p {
         .header-border /* Border for the "MUSEUM of the MUNDANE part */ {
             padding: 10px 0;
             width: 100%;
-            background-image: url('/images/textureNoise.webp');
+            background-image: url('/images/textureNoise.png');
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
@@ -111,7 +111,7 @@ p {
         .page-title /* The entire page title - has the pixel texture in it */ {
             padding: 5px 0;
             width: 100%;
-            background-image: url('/images/texturePixel.webp');
+            background-image: url('/images/texturePixel.png');
             background-size: cover;
             background-repeat: no-repeat;
             display: flex;
@@ -395,10 +395,9 @@ p {
             text-align: center;
         }
         .featured-product .product-image /* main product image */ {
-            size: 65%;
+            max-width: 80%;
             border: 1px solid #eee;
             margin-bottom: 10px;
-            /* Add background image here if you have it */
         }
         .featured-product .product-title {
             font-size: 1.3em;
@@ -441,49 +440,49 @@ p {
             gap: 20px;
             text-align: center;
         }
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-.product-card {
-    background-color: white;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    border: 2px solid black;
-    padding: 15px;
-    text-align: center;
-}
-.product-image {
-    width: 100%; 
-    height: 200px; 
-    overflow: hidden; 
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-bottom: 10px;
-}
-.product-image img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; 
-    display: block;
-}
-.product-title {
-    font-size: 1.1em;
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-.product-description {
-    font-size: 0.9em;
-    color: #666;
-}
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .product-card {
+            background-color: white;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            border: 2px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+        .product-image {
+            width: 100%; 
+            height: 200px; 
+            overflow: hidden; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            margin-bottom: 10px;
+        }
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain; 
+            display: block;
+        }
+        .product-title {
+            font-size: 1.1em;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .product-description {
+            font-size: 0.9em;
+            color: #666;
+        }
 
 
-.spacer {
-    margin-bottom: 20px;
-}
+        .spacer {
+            margin-bottom: 20px;
+        }
 
 
 /* FOOTER */
